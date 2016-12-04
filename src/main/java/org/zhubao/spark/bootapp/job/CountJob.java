@@ -27,7 +27,7 @@ public class CountJob implements Job<Long>, Function2<Long, Long, Long> {
 		return rdd.reduce(this);
 	}
 	
-	public static void main(String[] args) throws Exception {
+	/*public static void main(String[] args) throws Exception {
 		LivyClient client = new LivyClientBuilder(false).setURI(
 				new URI("http://192.168.99.100:8998")).build();
 
@@ -45,7 +45,7 @@ public class CountJob implements Job<Long>, Function2<Long, Long, Long> {
 		} finally {
 			client.stop(true);
 		}
-	}
+	}*/
 	public Long call(Long arg0, Long arg1) throws Exception {
 		return arg0 + arg1;
 	}
